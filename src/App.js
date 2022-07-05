@@ -1,22 +1,27 @@
 import './App.css';
 import Navbar from './Nav';
-import Hero from './Hero';
+// import Hero from './Hero';
 import Card from './Card';
-import Katie from './images/katie-zaferes.png'
+import data from './data';
 
 function App() {
+  let cards = data.map(card=> {
+    return (
+    <Card 
+      img= {card.coverImg}
+      rating= {card.stats.rating}
+      reviews= {card.stats.reviewCount}
+      country= {card.location}
+      title= {card.title}
+      price= {card.price}
+    />
+    )
+  })
   return (
     <div className='App'>
       <Navbar />
       {/* <Hero /> */}
-      <Card 
-      img= {Katie}
-      rating= {5}
-      reviews= {6}
-      country= {'USA'}
-      title= {'Life lessons with Katie Zaferes'}
-      price= {136}
-      />
+      {cards}
     </div>
   );
 }

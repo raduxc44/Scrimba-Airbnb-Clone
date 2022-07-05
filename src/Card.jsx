@@ -1,11 +1,10 @@
-import Star from './images/star.png'
 
 function Card (props) {
     return(
         <div className='card'>
-            <img src={props.img} alt="Katie Zaferes" className='katie'/>
+            <img src={`../images/${props.img}`} alt="Katie Zaferes" className='katie'/>
             <div className='card-stats'>
-                <img src={Star} alt="Star Icon" className='star'/>
+                <img src='../images/star.png' alt="Star Icon" className='star'/>
                 <span>{props.rating}</span>
                 <span className="gray">({props.reviews}) • </span>
                 <span className="gray">{props.country}</span>
