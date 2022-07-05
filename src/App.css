@@ -23,3 +23,25 @@ nav {
   width: 75%;
   align-self: center;
 }
+.card {
+  width: 175px;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+.card-stats {
+  display: flex;
+  align-items: center;
+}
+.katie {
+  border-radius: 10px;
+}
+.star {
+  width: 20px;
+}
+.gray {
+  color: gray;
+}
+.bold {
+  font-weight: bold;
+}
