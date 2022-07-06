@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Nav';
-// import Hero from './Hero';
+//import Hero from './Hero';
 import Card from './Card';
 import data from './data';
 
@@ -8,6 +8,7 @@ function App() {
   let cards = data.map(card=> {
     return (
     <Card 
+      key= {card.id}
       img= {card.coverImg}
       rating= {card.stats.rating}
       reviews= {card.stats.reviewCount}
@@ -21,7 +22,10 @@ function App() {
     <div className='App'>
       <Navbar />
       {/* <Hero /> */}
-      {cards}
+      <section className='cards-list'>
+        {cards}
+      </section>
+
     </div>
   );
 }
