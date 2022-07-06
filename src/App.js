@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Nav';
-//import Hero from './Hero';
+import Hero from './Hero';
 import Card from './Card';
 import data from './data';
 
@@ -15,13 +15,14 @@ function App() {
       country= {card.location}
       title= {card.title}
       price= {card.price}
+      openSpots = {card.openSpots}
     />
     )
   })
   return (
     <div className='App'>
       <Navbar />
-      {/* <Hero /> */}
+      <Hero />
       <section className='cards-list'>
         {cards}
       </section>
